@@ -1,0 +1,6 @@
+# enviroment
+.venv
+
+# IDE
+.idea
+.vscode
