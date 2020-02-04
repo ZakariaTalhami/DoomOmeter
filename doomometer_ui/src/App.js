@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Switch, Route, BrowserRouter} from 'react-router-dom';
+import DoomRoom from './views/doomRoom/DoomRoom';
+import Home from './views/home/Home';
+import {DoomguyProvider} from './DoomguyContext'
+import Logo from './views/Logo';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <DoomguyProvider>
+        <div className="App">
+          <Logo/>
+          <Switch>
+            <Route path="/doomroom" component={DoomRoom}/>
+            <Route path="/" component={Home} exact/>
+          </Switch>
+        </div>
+      </DoomguyProvider>
+    </BrowserRouter>
   );
 }
 
