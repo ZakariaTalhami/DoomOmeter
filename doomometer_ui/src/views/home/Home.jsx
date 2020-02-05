@@ -45,7 +45,7 @@ const Home = () => {
             <div className="or">
                 or
             </div>
-            <button>create</button>
+            <button onClick={() => history.push('/create')}>create</button>
         </div>
     )
 }
