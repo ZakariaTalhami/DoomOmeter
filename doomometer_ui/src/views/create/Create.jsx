@@ -6,6 +6,7 @@ import {saveObject} from '../../utils/localStorageHandler';
 const Create = () => {
     const [keyValue, setKeyValue] = useState("");
     const [emailValue, setEmailValue] = useState("");
+    // eslint-disable-next-line
     const [doomguy, setDoomguy] = useContext(DoomguyContext);
     const history = useHistory();
 

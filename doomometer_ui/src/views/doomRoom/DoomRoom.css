@@ -1,0 +1,22 @@
+.sitButton {
+    position: absolute;
+    bottom: 5%;
+    width: 100px;
+    outline: none;
+}
+
+
+
+/* Tablet */
+@media (max-width: 935px){
+    .sitButton {
+        width: inherit;
+    }
+  }
+  
+  /* Phone  */
+  @media (max-width: 480px){
+    .sitButton {
+        width: 100px;
+    }
+  }

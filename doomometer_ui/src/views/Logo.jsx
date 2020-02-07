@@ -2,7 +2,7 @@ import React from 'react';
 
 const Logo = () => (
     <>
-        <div className="doomometer logo">
+        <div className="doomometer logo noselect">
             <span>Doom</span>
             <span className="o">O</span>
             <span>mete</span>
