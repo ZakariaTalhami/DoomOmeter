@@ -8,6 +8,7 @@ const Home = () => {
     const history = useHistory();
     const [doomguy, setDoomguy] = useContext(DoomguyContext);
     const [keyValue, setKeyValue] = useState(doomguy ? doomguy.key : "")
+    // eslint-disable-next-line
     const [isLoadingDoomguym, setIsloadingDoomguy] = useState(false);
 
     const loadDoomguy = () => {
@@ -38,7 +39,7 @@ const Home = () => {
         <div className="container">
             <label>key</label>
             <input type="text"
-                value={doomguy ? doomguy.key : ""}
+                value={keyValue}
                 onChange={(event) => setKeyValue(event.target.value)}
                 onKeyPress={checkForEnter} />
             <button style={{ marginTop: "50px" }} onClick={loadDoomguy}>load</button>
