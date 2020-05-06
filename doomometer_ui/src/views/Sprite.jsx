@@ -54,7 +54,6 @@ const Sprite = ({
     }
     
     const pos = spriteState.currentPosition;
-    console.log(pos);
     const spriteStyle = {
         background: `url(${file})`,
         backgroundPositionX: `${pos.x}px`,

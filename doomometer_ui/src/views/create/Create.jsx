@@ -21,7 +21,7 @@ const Create = () => {
             .then(doomguy => {
                 saveObject("doomguy", doomguy);
                 setDoomguy(doomguy);
-                history.push("/doomroom");
+                setTimeout(() => history.push("/doomroom"), 0);
             })
             .catch(error => {
                 console.log(error);

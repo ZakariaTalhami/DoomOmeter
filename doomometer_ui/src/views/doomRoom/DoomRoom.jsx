@@ -16,7 +16,7 @@ const DoomRoom = () => {
     useEffect(() => {
         if (!doomguy) {
             // Redirect user if doomguy isnt loaded
-            history.push("/");
+            setTimeout(() => history.push("/"), 0);
         } else {
             let id = setInterval(() => {
                 loadDoomguy();

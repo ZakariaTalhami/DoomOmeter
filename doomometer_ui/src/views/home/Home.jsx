@@ -20,7 +20,7 @@ const Home = () => {
                     data.json().then((doomguy) => {
                         saveObject("doomguy", doomguy);
                         setDoomguy(doomguy);
-                        history.push("/doomroom");
+                        setTimeout(() => history.push('/doomroom'), 0)
                     })
                 }
             })
@@ -28,7 +28,12 @@ const Home = () => {
                 console.error("Error!");
                 console.error(error);
             })
+        }
+        
+    const loadCreateView = () => {
+        setTimeout(() => history.push('/create'), 0)
     }
+
     const checkForEnter = (event) => {
         if (event.key === "Enter") {
             loadDoomguy()
@@ -46,7 +51,7 @@ const Home = () => {
             <div className="or">
                 or
             </div>
-            <button onClick={() => history.push('/create')}>create</button>
+            <button onClick={() => loadCreateView()}>create</button>
         </div>
     )
 }
